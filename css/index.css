@@ -1,3 +1,261 @@
-/* Use your own code or past solution for Great Idea Web Page CSS here! */
+/* http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+body {
+	line-height: 1;
+}
+ol, ul {
+	list-style: none;
+}
+blockquote, q {
+	quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: '';
+	content: none;
+}
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+
+/* Set every element's box-sizing to border-box */
+* {
+    box-sizing: border-box;
+}
+
+html, body {
+    height: 100%;
+    font-family: 'Titillium Web', sans-serif;
+}
+
+h1, h2, h3, h4, h5 {
+    font-family: 'Bangers', cursive;
+    letter-spacing: 1px;
+    margin-bottom: 15px;
+}
 
 
+/* Header Styles */
+header{
+	width: 100%;
+}
+
+nav{
+    display: flex;
+	justify-content: space-around;
+	align-items: center;
+	font-family: 'Titillium Web', sans-serif;
+    margin-top: 1rem;
+    width: 100%;
+}
+
+.links{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    width: 70%;
+}
+
+nav a{
+	color: grey;
+	font-size: 2vh;
+	text-decoration: none;
+    text-align: center;
+}
+
+
+/* Main Content Styles */
+.jumbotron{
+	display: flex;
+	flex-direction: row;
+	justify-content: space-around;
+	align-items: center;
+	padding: 3rem;
+}
+
+.jumbotron-text{
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+
+}
+
+section h1{
+	font-size: 75px;
+	text-align: center;
+}
+
+.button{
+	font-size: 16px;
+	font-family: 'Titillium Web', sans-serif;
+	text-decoration: none;
+	text-align: center;
+	color: black;
+	border: 1px solid black;
+	width: 8rem;
+	height: 2rem;
+	padding: 5px;
+}
+
+.box-2{
+	display: flex;
+	flex-direction: row;
+	justify-content: center;
+	align-items: center;
+}
+
+.box-2-child{
+	width: 45%;
+	padding: 0 0.5rem 0 0.5rem;
+}
+
+.box-3{
+	display: flex;
+	flex-direction: row;
+	justify-content: center;
+	align-items: center;
+	padding-bottom: 2rem;
+}
+
+.box-3-child{
+	width: 30%;
+	padding: 0 0.5rem 0 0.5rem;
+}
+
+
+/* Secondary Content Styles */
+
+hr{
+	width: 90%;
+}
+
+.middle-img{
+	width: 100%;
+	padding: 3% 5% 3% 5%;
+}
+
+
+/* Footer Styles */
+
+footer{
+	display: flex;
+	flex-direction: column;
+	margin: 2rem 0 0 5%; 
+}
+
+.copy{
+	font-size: 13px;
+	text-align: center;
+	padding: 2rem;
+}
+
+
+/* Styles for Responsive Design */
+
+/* TABLET */
+@media only screen and (max-width: 800px){
+    nav{
+        display: flex;
+        flex-direction: column-reverse;
+        align-items: center;
+        justify-content: space-between;
+    }
+
+    .logo{
+        width: 20%;
+        margin-bottom: 1rem;
+    }
+
+    .links{
+        display: flex;
+        flex-direction: row;
+        justify-content: space-around;
+        width: 100%;
+    }
+
+    .jumbotron-img{
+        display: none;
+    }
+}
+
+/* MOBILE */
+@media only screen and (max-width: 500px){
+    nav{
+        display: flex;
+        flex-direction: column-reverse;
+    }
+
+    .links{
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        width: 100%;
+        font-size: 20px;
+    }
+    
+    .links :first-child{
+        border-top: 1px solid black;
+        border-bottom: 1px solid black;
+        width: 100%;
+        padding: 1rem;
+    }
+
+    a{
+        border-bottom: 1px solid black;
+        width: 100%;
+        padding: 1rem;
+    }
+
+    .logo{
+        width: 45%;
+    }
+
+    .box-2{
+        display: flex;
+        flex-direction: column;
+    }
+
+    .box-2-child{
+        width: 90%;
+        margin-bottom: 2rem;
+    }
+
+    .box-3{
+        display: flex;
+        flex-direction: column;
+    }
+
+    .box-3-child{
+        width: 90%;
+        margin-bottom: 2rem;
+    }
+}
